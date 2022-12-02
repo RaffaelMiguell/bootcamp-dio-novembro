@@ -6,7 +6,7 @@ pokeApi.getPokemonDetail = pokemon => {
 }
 
 // criando método para o objto pokeApi
-pokeApi.getPokemons = (offset = 0, limit = 100) => {
+pokeApi.getPokemons = (offset = 0, limit = 350) => {
    const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 
    return (

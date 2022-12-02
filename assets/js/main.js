@@ -10,19 +10,20 @@ function convertsPokemonTypes(pokemonTypes) {
 
 function converteParaHtml(pokemon) {
    return `
-   <li class="pokemon">
-  <span class="number">${pokemon.id}</span>
-  <span class="name">${pokemon.name}</span>
+ <li class="pokemon">
+   <span class="number">#${pokemon.id}</span>
+   <span class="name">${pokemon.name}</span>
 
-  <div class="detail">
-     <ul class="types">
-        ${convertsPokemonTypes(pokemon.types).join('')}
-     </ul>
-     <img
-        src="${pokemon.sprites.other.dream_world.front_default}"
-        alt="Pokemon ${pokemon.name}"
-     />
-  </div>
+   <div class="detail">
+      <ul class="types">
+         ${convertsPokemonTypes(pokemon.types).join('')}
+      </ul>
+      <img
+         src="${pokemon.sprites.other.dream_world.front_default}"
+         alt="Pokemon ${pokemon.name}"
+      />
+   </div>
+
 </li>`
 }
 
