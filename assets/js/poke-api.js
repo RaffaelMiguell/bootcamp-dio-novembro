@@ -1,12 +1,29 @@
 // linkando API
 const pokeApi = {}
 
+function convertForClassPokemon(pokemonDetails) {
+   const pokemon = new Pokemon()
+   pokemon.name = pokemonDetails.name
+   pokemon.numberId = pokemonDetails.id
+   const types = pokemonDetails.types.map(typeSlot => typeSlot.type.name)
+   const [type] = types
+
+   pokemon.types = types
+   pokemon.type = type
+
+   pokemon.photo = pokemonDetails.sprites.other.dream_world.front_default
+
+   return pokemon
+}
+
 pokeApi.getPokemonDetail = pokemon => {
-   return fetch(pokemon.url).then(response => response.json())
+   return fetch(pokemon.url)
+      .then(response => response.json())
+      .then(convertForClassPokemon)
 }
 
 // criando método para o objto pokeApi
-pokeApi.getPokemons = (offset = 0, limit = 350) => {
+pokeApi.getPokemons = (offset = 0, limit = 300) => {
    const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 
    return (

@@ -2,25 +2,19 @@ console.log('hello world, my brother/sister')
 
 // iniciando consumo da api pokeapi
 
-function convertsPokemonTypes(pokemonTypes) {
-   return pokemonTypes.map(
-      typeSlot => `<li class="type">${typeSlot.type.name}</li>`
-   )
-}
-
 function converteParaHtml(pokemon) {
    return `
- <li class="pokemon">
-   <span class="number">#${pokemon.id}</span>
+ <li class="pokemon ${pokemon.type}">
+   <span class="number">#${pokemon.numberId}</span>
    <span class="name">${pokemon.name}</span>
 
    <div class="detail">
       <ul class="types">
-         ${convertsPokemonTypes(pokemon.types).join('')}
+        ${pokemon.types.map((type) => `<li class="type">${type}</li>`).join('')}
       </ul>
       <img
-         src="${pokemon.sprites.other.dream_world.front_default}"
-         alt="Pokemon ${pokemon.name}"
+         src="${pokemon.photo}"
+         alt="Pokemon ${pokemon.photo}"
       />
    </div>
 
@@ -29,7 +23,7 @@ function converteParaHtml(pokemon) {
 
 const idParaIncluirLista = document.getElementById('pokemonList')
 
-pokeApi.getPokemons().then((pokemons = []) => {
-   const newHtml = pokemons.map(converteParaHtml).join('')
+pokeApi.getPokemons().then((pokemon = []) => {
+   const newHtml = pokemon.map(converteParaHtml).join('')
    idParaIncluirLista.innerHTML = newHtml
 })
