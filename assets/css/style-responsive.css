@@ -46,8 +46,8 @@
       justify-content: center;
       align-items: center;
       padding: auto 2rem;
-      transition-duration: 1.5s;
-      transition-delay: 0.5s;
+      /* transition-duration: 1.5s; */
+      /* transition-delay: 0.5s; */
    }
 
    .pokemon {
@@ -117,11 +117,12 @@
    }
 
    .pokemon {
-      height: 10rem;
+      height: 14rem;
    }
 
    .pokemon .detail {
-      height: 9rem;
+      max-height: 10rem;
+      height: 10rem;
    }
 
    .pokemon .detail .type {

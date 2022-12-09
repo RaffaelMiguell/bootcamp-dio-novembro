@@ -7,7 +7,7 @@ function converteParaHtml(pokemon) {
    return `
  <li class="pokemon ${pokemon.type}">
    <span class="number">#${pokemon.numberId}</span>
-   <span class="name">${pokemon.name}</span>
+   <span class="name ${pokemon.type}">${pokemon.name}</span>
 
    <div class="detail">
       <ul class="types">
