@@ -3,6 +3,7 @@ console.log('hello world, my brother/sister')
 // iniciando consumo da api pokeapi
 
 function converteParaHtml(pokemon) {
+   // <li class="pokemon ${pokemon.type}">  inserir esse trecho na linha 9
    return `
  <li class="pokemon ${pokemon.type}">
    <span class="number">#${pokemon.numberId}</span>
@@ -10,7 +11,7 @@ function converteParaHtml(pokemon) {
 
    <div class="detail">
       <ul class="types">
-        ${pokemon.types.map((type) => `<li class="type">${type}</li>`).join('')}
+        ${pokemon.types.map(type => `<li class="type ${pokemon.type}">${type}</li>`).join('')}
       </ul>
       <img
          src="${pokemon.photo}"

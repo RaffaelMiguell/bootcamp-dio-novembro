@@ -4,11 +4,10 @@
    --font-roboto: 'Roboto', sans-serif;
    --font-color-01: #2c2d2f;
    --font-color-02: #346063;
-   --font-color-03: #f24a48;
    --color-01: #76e4e9;
    --color-02: #313434;
    --color-03: #b5f3e6;
-   --color-04: #e7eaeb;
+   --color-04: #f24a48;
    font-size: 62.5%;
 }
 
@@ -28,58 +27,58 @@ body {
 
 /* colors pokemons types */
 .steel {
-   background-color: #5796a4;
+   background-color: hsl(191, 31%, 49%);
 }
 .water {
-   background-color: #53a1dd;
+   background-color: hsl(206, 67%, 60%);
 }
 .dragon {
-   background-color: #0a73c6;
+   background-color: hsl(206, 90%, 41%);
 }
 .electric {
-   background-color: #f7ee4e;
+   background-color: hsl(57, 91%, 64%);
 }
 .fairy {
-   background-color: #ed98e7;
+   background-color: hsl(304, 70%, 76%);
 }
 .ghost {
-   background-color: #c2ccf2;
+   background-color: hsl(227, 65%, 85%);
 }
 .fire {
-   background-color: #f5a64f;
+   background-color: hsl(31, 89%, 64%);
 }
 .ice {
-   background-color: #7fd3c5;
+   background-color: hsl(170, 49%, 66%);
 }
 .bug {
-   background-color: #c1ff22;
+   background-color: hsl(77, 100%, 57%);
 }
 .fighting {
-   background-color: #a42e38;
+   background-color: hsl(355, 56%, 41%);
 }
 .normal {
-   background-color: #e2e2e2;
+   background-color: hsl(0, 0%, 89%);
 }
 .rock {
-   background-color: #cdc18e;
+   background-color: hsl(49, 39%, 68%);
 }
 .grass {
-   background-color: #4ef156;
+   background-color: hsl(123, 85%, 63%);
 }
 .psychic {
-   background-color: #f07f7b;
+   background-color: hsl(2, 80%, 71%);
 }
 .dark {
-   background-color: #60626f;
+   background-color: hsl(232, 7%, 41%);
 }
 .ground {
-   background-color: #d78654;
+   background-color: hsl(23, 62%, 59%);
 }
 .poison {
-   background-color: #b563cc;
+   background-color: hsl(287, 51%, 59%);
 }
 .flying {
-   background-color: #9cb4eb;
+   background-color: hsl(222, 66%, 77%);
 }
 /* ********************** */
 
@@ -90,14 +89,8 @@ body {
    margin-bottom: 1.5rem;
    /* margin-top: -1.5rem; */
    padding: 1rem;
-   background-color: var(--font-color-03);
+   background-color: var(--color-04);
 }
-
-/* .content .title .title-h1 {
-   font-size: 2.5rem;
-   color: var(--font-color-03);
-   text-transform: uppercase;
-} */
 
 .content .title .title-img:nth-child(1) {
    width: 10rem;
@@ -154,10 +147,13 @@ body {
 }
 
 .pokemon .detail .type {
+   filter: brightness(1.2);
+   /* background-color: #346063; */
    text-align: center;
-   background-color: var(--color-03);
-   font-size: 0.9rem;
+   font-size: 1.2rem;
+   font-weight: bold;
    padding: 0.2rem 0.8rem;
+   margin: 0.3rem;
    border-radius: 15% 15% 15% 15% / 45% 45% 45% 45%;
 }
 
