@@ -2,7 +2,7 @@
 
 :root {
    --font-roboto: 'Roboto', sans-serif;
-   --font-color-01: #2c2d2f;
+   --font-color-01: #1e1f20;
    --font-color-02: #346063;
    --color-01: #76e4e9;
    --color-02: #313434;
@@ -87,17 +87,17 @@ body {
    align-items: center;
    justify-content: space-between;
    margin-bottom: 1.5rem;
-   /* margin-top: -1.5rem; */
-   padding: 1rem;
+   padding: 1.5rem;
+   height: 9rem;
    background-color: var(--color-04);
 }
 
 .content .title .title-img:nth-child(1) {
-   width: 10rem;
+   width: 15rem;
 }
 
 .content .title .title-img:nth-child(2) {
-   width: 6rem;
+   width: 8rem;
 }
 
 .pokemons {
@@ -120,9 +120,9 @@ body {
 
 .pokemon .number {
    padding: 0.5rem;
-   color: var(--font-color-02);
+   color: var(--font-color-01);
    text-align: right;
-   font-size: 1.1rem;
+   font-size: 1.5rem;
    font-weight: bold;
 }
 
