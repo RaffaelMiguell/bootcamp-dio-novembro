@@ -1,30 +1,42 @@
-console.log('hello world, my brother/sister')
+
+const idParaIncluirLista = document.getElementById('pokemonList')
+const btnLoad = document.getElementById('btnLoad')
+const limit = 2
+let offset = 0
 
 // iniciando consumo da api pokeapi
 
-function converteParaHtml(pokemon) {
-   // <li class="pokemon ${pokemon.type}">  inserir esse trecho na linha 9
-   return `
- <li class="pokemon ${pokemon.type}">
-   <span class="number">#${pokemon.numberId}</span>
-   <span class="name ${pokemon.type}">${pokemon.name}</span>
+function loadPokemonsItens(offset, limit) {
+   pokeApi.getPokemons(offset, limit).then((pokemon = []) => {
+      const newHtml = pokemon
+         .map(
+            pokemon =>
+               `<li class="pokemon ${pokemon.type}">
+                  <span class="number">#${pokemon.numberId}</span>
+                  <span class="name ${pokemon.type}">${pokemon.name}</span>
 
-   <div class="detail">
-      <ul class="types">
-        ${pokemon.types.map(type => `<li class="type ${pokemon.type}">${type}</li>`).join('')}
-      </ul>
-      <img
-         src="${pokemon.photo}"
-         alt="Pokemon ${pokemon.photo}"
-      />
-   </div>
-
-</li>`
+                  <div class="detail">
+                     <ul class="types">
+                     ${pokemon.types
+                        .map(type => `<li class="type ${type}">${type}</li>`)
+                           .join('')}
+                     </ul>
+                     <img
+                        src="${pokemon.photo}"
+                        alt="Pokemon ${pokemon.name}"
+                     />
+                  </div>
+               </li>`
+         )
+         .join('')
+      idParaIncluirLista.innerHTML += newHtml
+   })
 }
 
-const idParaIncluirLista = document.getElementById('pokemonList')
+loadPokemonsItens(offset, limit)
 
-pokeApi.getPokemons().then((pokemon = []) => {
-   const newHtml = pokemon.map(converteParaHtml).join('')
-   idParaIncluirLista.innerHTML = newHtml
+btnLoad.addEventListener('click', () => {
+   offset += limit
+   loadPokemonsItens(offset, limit)
+   console.log('hello world, my brother/sister')
 })
