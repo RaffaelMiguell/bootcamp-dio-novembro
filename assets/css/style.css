@@ -3,8 +3,9 @@
 :root {
    --font-roboto: 'Roboto', sans-serif;
    --color-01: #ffe031;
-   --color-02: #1f2021;
+   --color-02: #0d0d0d;
    --color-03: #f24a48;
+   --color-04: #323737;
    font-size: 62.5%;
 }
 
@@ -36,19 +37,19 @@ body {
    background-color: hsl(57, 91%, 64%);
 }
 .fairy {
-   background-color: hsl(304, 70%, 76%);
+   background-color: hsl(303, 90%, 85%);
 }
 .ghost {
    background-color: hsl(227, 65%, 85%);
 }
 .fire {
-   background-color: hsl(31, 89%, 64%);
+   background-color: hsl(359, 100%, 69%);
 }
 .ice {
    background-color: hsl(170, 49%, 66%);
 }
 .bug {
-   background-color: hsl(77, 100%, 70%);
+   background-color: hsl(77, 46%, 71%);
 }
 .fighting {
    background-color: hsl(355, 56%, 41%);
@@ -60,7 +61,7 @@ body {
    background-color: hsl(49, 39%, 68%);
 }
 .grass {
-   background-color: hsl(123, 85%, 69%);
+   background-color: hsl(168.14,77.97%,44.51%);
 }
 .psychic {
    background-color: hsl(2, 80%, 71%);
@@ -69,13 +70,13 @@ body {
    background-color: hsl(232, 7%, 41%);
 }
 .ground {
-   background-color: #d29083;
+   background-color: hsl(38, 74%, 53%);
 }
 .poison {
-   background-color: hsl(287, 70%, 58%);
+   background-color: hsl(285, 68%, 47%);
 }
 .flying {
-   background-color: hsl(222, 80%, 86%);
+   background-color: hsl(221, 33%, 81%);
 }
 /* ********************** */
 
@@ -108,47 +109,46 @@ body {
    display: flex;
    flex-direction: column;
    margin: 0.5rem;
+   height: 24rem;
    font-weight: bold;
-   color: var(--color-02);
+   color: var(--color-04);
    border-radius: 0.7rem;
 }
 
 .pokemon .number {
    padding: 0.5rem;
-   color: var(--color-02);
    text-align: right;
    font-size: 1rem;
    font-weight: bold;
 }
 
 .pokemon .name {
-   filter: brightness(1.2);
-   color: var(--color-02);
-   font-weight: bold;
-   font-size: 1.2rem;
-   text-transform: uppercase;
    display: flex;
    justify-content: center;
    align-items: center;
+   font-size: 1.2rem;
+   text-transform: uppercase;
    padding: 0.4rem;
+   filter: brightness(1.2);
 }
 
 .pokemon .detail {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   align-items:flex-end;
-   /* background-color: #d29083; */
-   max-height: 8rem;
+   align-items: flex-end;
+   /* background-color: #f300d6; */
+   max-height: 16rem;
+   height: 16rem;
    padding: 0.5rem;
 }
 
 .pokemon .detail .type {
+   width: 7rem;
    filter: brightness(1.2);
-   /* background-color: #346063; */
+   /* filter: saturate(2.5); */
    text-align: center;
-   font-size: 1.2rem;
-   font-weight: bold;
+   font-size: 0.9rem;
    padding: 0.2rem 1rem;
    margin: 0.3rem;
    border-radius: 1rem;
@@ -166,12 +166,17 @@ body {
 }
 
 .content .load button {
-   background-color: var(--color-01);
+   background-color: var(--color-03);
    color: var(--color-02);
    font-size: 2rem;
-   font-weight: bold;
    padding: 1rem 2.5rem;
    border: none;
    border-radius: 0.3rem;
+   transition: 0.3s;
+}
+
+.content .load button:hover {
+   padding: 0.9rem 2.3rem;
+   filter: brightness(1.05);
 }
 /* ============== */

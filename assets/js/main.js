@@ -1,7 +1,6 @@
-
 const idParaIncluirLista = document.getElementById('pokemonList')
 const btnLoad = document.getElementById('btnLoad')
-const limit = 2
+const limit = 8
 let offset = 0
 
 // iniciando consumo da api pokeapi
@@ -19,7 +18,7 @@ function loadPokemonsItens(offset, limit) {
                      <ul class="types">
                      ${pokemon.types
                         .map(type => `<li class="type ${type}">${type}</li>`)
-                           .join('')}
+                        .join('')}
                      </ul>
                      <img
                         src="${pokemon.photo}"
