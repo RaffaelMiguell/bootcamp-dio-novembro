@@ -18,7 +18,7 @@
 }
 
 body {
-   background-color: var(--color-02);
+   background-color: var(--color-04);
    max-width: 100vw;
    height: 100vh;
 }
