@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@400;500&display=swap');
 
 :root {
    --font-roboto: 'Roboto', sans-serif;
+   --font-open-sans: 'Open Sans', sans-serif;
    --color-01: #ffe031;
-   --color-02: #0d0d0d;
+   --color-02: #282727;
    --color-03: #f24a48;
-   --color-04: #323737;
+   --color-04: #ffffff;
    font-size: 62.5%;
 }
 
 * {
-   font-family: var(--font-roboto);
    list-style: none;
    box-sizing: border-box;
    padding: 0;
@@ -18,9 +18,10 @@
 }
 
 body {
-   background-color: var(--color-04);
+   background-color: var(--color-02);
    max-width: 100vw;
    height: 100vh;
+   font-family: var(--font-open-sans);
 }
 
 /* colors pokemons types */
@@ -55,7 +56,7 @@ body {
    background-color: hsl(355, 56%, 41%);
 }
 .normal {
-   background-color: hsl(0, 8%, 90%);
+   background-color: hsl(180, 3%, 78%);
 }
 .rock {
    background-color: hsl(49, 39%, 68%);
@@ -127,6 +128,8 @@ body {
    justify-content: center;
    align-items: center;
    font-size: 1.2rem;
+   font-family: var(--font-roboto);
+   letter-spacing: 0.3rem;
    text-transform: uppercase;
    padding: 0.4rem;
    filter: brightness(1.2);
@@ -145,13 +148,13 @@ body {
 
 .pokemon .detail .type {
    width: 7rem;
-   filter: brightness(1.2);
-   /* filter: saturate(2.5); */
    text-align: center;
    font-size: 0.9rem;
    padding: 0.2rem 1rem;
    margin: 0.3rem;
    border-radius: 1rem;
+   /* filter: saturate(2); */
+   filter: brightness(1.15);
 }
 
 .pokemon .detail img {
