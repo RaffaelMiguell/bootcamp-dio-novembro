@@ -14,4 +14,4 @@
 -  JAVASCRIPT
 -  GITHUB
 
-[Clique aqui para visualizar](https://raffaelmiguell.github.io/08---PROJETO-POKEDEX/)
+[Clique aqui para visualizar](https://raffaelmiguell.github.io/bootcamp-dio-novembro/)
