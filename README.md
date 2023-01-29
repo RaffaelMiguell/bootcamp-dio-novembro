@@ -1,4 +1,4 @@
-## BOOTCAMP ROCKETSEAT
+## BOOTCAMP DIO
 
 ![preview](/assets/imgs/bootcamp-dio.png)
 
